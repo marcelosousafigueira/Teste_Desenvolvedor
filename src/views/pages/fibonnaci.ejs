@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+
+    <div class="container jumbotron">
+        <div class="row">
+          <div class="col">
+            <h1>sequência de Fibonacci:</h1>
+            <ul class="list-group list-group-flus ">
+                
+                    <li class="list-group-item list-group-item-action list-group-item-secondary">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                              <label for="inputPassword6" class="col-form-label">Numero:</label>
+                            </div>
+                            <div class="col-auto">
+                                <form method="GET" action="/fibonacci">
+                              <input type="number" name="numero" required placeholder="Digite apenas Numeros" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                            </div>
+                            <div class="col-auto">
+                              <span id="passwordHelpInline" class="form-text">
+                                 <% if(validador){ %>
+                                    <div class="alert alert-success" role="alert">
+                                        o numero <%= numero %>  faz parte da sequencia de Fibonnaci
+                                      </div>
+                                  <% } else{ %>  
+                                    <div class="alert alert-danger" role="alert">
+                                       Não faz parte da sequencia de Fibonnaci
+                                      </div>
+                                 <% } %>
+                              </span>                              
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary m-2">Verificar Numero</button>
+                        </form>
+                    </li>
+                
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

@@ -49,14 +49,3 @@ Foi usado as seguintes Tecnologias nesse projeto:
 ## 📄 Licença
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/marcelosousafigueira/Teste_Desenvolvedor/blob/main/LICENSE) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-- Conte a outras pessoas sobre este projeto 📢
-- Convide alguém da equipe para uma cerveja 🍺
-- Obrigado publicamente 🤓.
-- etc.
-
----
-
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊

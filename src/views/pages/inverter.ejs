@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+
+    <div class="container jumbotron">
+        <div class="row">
+          <div class="col">
+            <h1>Inverter Texto:</h1>
+            <ul class="list-group list-group-flus">
+                <div class="row">
+                    <div class="col">
+                      
+                        <form method="GET" >
+
+                            <div class="mb-3">
+                                <textarea type="text" name="texto" value=" " placeholder="Digite seu texto..."  class="form-control" id="exampleFormControlTextarea1" required rows="3"></textarea>
+                              </div>
+                              <button type="submit" value="Enviar" class="btn btn-primary">Inverter Texto</button>
+                        </form>
+
+
+
+
+                    </div>
+                    <div class="col">
+                        <% if(!texto ){ %>
+                            <div class="alert alert-warning"  role="alert">
+                                <h4 class="alert-heading">Aguardando texto...</h4>
+                                <p>  </p>
+                                <hr>
+                                <p class="mb-0">Original : ...</p>
+                              </div>
+                                
+                          <% } else{ %> 
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Texto invertido com Sucesso!</h4>
+                                <p> <%= texto %> </p>
+                                <hr>
+                                <p class="mb-0">Original : <%= original %></p>
+                              </div> 
+                            
+                         <% } %>
+
+
+                                          
+                    </div>
+                
+            </ul>
+
+          </div>
+          
+        </div>
+      </div>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

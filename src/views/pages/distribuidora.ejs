@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+
+    <div class="container jumbotron">
+        <div class="row">
+          <div class="col">
+            <h1>Balanço Geral:</h1>
+            <ul class="list-group list-group-flus">
+                <% faturamento.forEach(function(faturamento) { %>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary">
+                        <strong>Estado:</strong>  <%= faturamento.estado %> -
+                        <strong>Valor: </strong> R$<%= faturamento.valor %> -
+                        <strong>Representa: </strong> <%= faturamento.porcem %> %
+                    </li>
+                <% }); %>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+
+

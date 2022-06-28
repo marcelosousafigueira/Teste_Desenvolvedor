@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+    
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    
+    <main>
+
+        <div class="container jumbotron">
+            <div class="row">
+              <div class="col">
+                <h1>Faturamento Mensal:</h1>
+                <ul class="list-group list-group-flus">
+                    <% fatura.forEach(function(fatura) { %>
+                        <li class="list-group-item list-group-item-action list-group-item-secondary">
+                            <strong>Dia: </strong> <%= fatura.dia %> -
+                            <strong>Valor: </strong> <%= fatura.valor %>
+                        </li>
+                    <% }); %>
+                </ul>
+              </div>
+              <div class="col">
+                <h1>Resultados:</h1>
+                    <div class="d-flex flex-column mb-3">
+                        <div class="p-2  list-group-item list-group-item-action list-group-item-secondary"><strong>Maior Valor: </strong> dia <%= maxValue.dia %>, Valor: <%= maxValue.valor %> </div>
+                       
+                    
+                        <!-- Force next columns to break to new line at md breakpoint and up -->
+                        <div class="w-100 d-none d-md-block"></div>
+                    
+                        <div class="p-2  list-group-item list-group-item-action list-group-item-secondary"><strong>Menor Valor: </strong>dia <%= minValue.dia %>, Valor: <%= minValue.valor %></div>
+                       
+
+                        <div class="p-2  list-group-item list-group-item-action list-group-item-secondary"><strong>Media Total: </strong><%= media %></div>
+                       
+                    </div>
+              </div>
+            </div>
+          </div>
+
+    </main>
+    
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+    
+    </body>
+    </html>
+
+
+   
